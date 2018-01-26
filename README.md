@@ -9,4 +9,4 @@ https://460xlin.github.io/homework-1-noisy-planets-460xlin/
 Terrian: perlin noise
 Cloud :another perlin noise
 
-![image](http://github.com/460xlin/homework-1-noisy-planets-460xlin/master/WechatIMG132.jpeg)
+![image](http://github.com/460xlin/homework-1-noisy-planets-460xlin/raw/master/WechatIMG132.jpeg)
