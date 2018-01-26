@@ -30,6 +30,10 @@ class ShaderProgram {
   unifViewProj: WebGLUniformLocation;
   unifColor: WebGLUniformLocation;
   unifTime: WebGLUniformLocation;
+  unifRadius: WebGLUniformLocation;
+  unifTerH: WebGLUniformLocation;
+  unifCloudS: WebGLUniformLocation;
+  unifCloudD: WebGLUniformLocation;
 
   constructor(shaders: Array<Shader>) {
     this.prog = gl.createProgram();
@@ -50,6 +54,10 @@ class ShaderProgram {
     this.unifViewProj   = gl.getUniformLocation(this.prog, "u_ViewProj");
     this.unifColor      = gl.getUniformLocation(this.prog, "u_Color");
     this.unifTime       = gl.getUniformLocation(this.prog, "u_Time");
+    this.unifRadius     = gl.getUniformLocation(this.prog, "u_Radius");
+    this.unifTerH       = gl.getUniformLocation(this.prog, "u_TerH");
+    this.unifCloudS     = gl.getUniformLocation(this.prog, "u_CloudS");
+    this.unifCloudD     = gl.getUniformLocation(this.prog, "u_CloudD");
   }
 
   use() {
@@ -95,6 +103,42 @@ class ShaderProgram {
     if(this.unifTime !== -1)
     {
       gl.uniform1f(this.unifTime, mTime);
+    }
+  }
+
+  setRadius(mRadius: number)
+  {
+    this.use();
+    if(this.unifRadius !== -1)
+    {
+      gl.uniform1f(this.unifRadius, mRadius);
+    }
+  }
+
+  setTerH(mTerH: number)
+  {
+    this.use();
+    if(this.unifTerH !== -1)
+    {
+      gl.uniform1f(this.unifTerH, mTerH);
+    }
+  }
+
+  setCloudS(mCloudS: number)
+  {
+    this.use();
+    if(this.unifCloudS !== -1)
+    {
+      gl.uniform1f(this.unifCloudS, mCloudS);
+    }
+  }
+
+  setCloudD(mCloudD: number)
+  {
+    this.use();
+    if(this.unifCloudD !== -1)
+    {
+      gl.uniform1f(this.unifCloudD, mCloudD);
     }
   }
 
