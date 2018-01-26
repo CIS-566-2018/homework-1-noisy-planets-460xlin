@@ -8,3 +8,5 @@ https://460xlin.github.io/homework-1-noisy-planets-460xlin/
 
 Terrian: perlin noise
 Cloud :another perlin noise
+
+homework-1-noisy-planets-460xlin/WechatIMG132.jpeg
